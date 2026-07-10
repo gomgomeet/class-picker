@@ -2,6 +2,21 @@
 
 새 작업을 마칠 때마다 맨 위에 기록이 추가됩니다. (`/save-work` 실행 시 자동 기록)
 
+## 2026-07-10 (금) - 5차
+
+### 오늘 한 일
+- 에이전트 설치 스크립트(`setup-agents.ps1`) 추가
+  - 새 컴퓨터에서 저장소를 받은 뒤 `powershell -ExecutionPolicy Bypass -File .\setup-agents.ps1` 한 줄만 실행하면, 저장소의 에이전트 5개가 전역 폴더(`~\.claude\agents`)로 자동 복사됨
+  - 에이전트가 바뀌면 `git pull` 후 스크립트를 다시 실행해서 갱신
+
+### 변경된 파일
+- `setup-agents.ps1` (새 파일)
+- `PROGRESS.md`
+
+### 다음에 할 일
+- 집/학교 컴퓨터에서 브랜치 받아서 `setup-agents.ps1` 실행해보기
+- 사라진 튜토리얼(`tutorial.md`)과 발표 자료(`slides.md`) 다시 작성하기
+
 ## 2026-07-10 (금) - 4차
 
 ### 오늘 한 일
