@@ -16,7 +16,20 @@
       "Bash(git branch*)",
       "Bash(git checkout*)",
       "Bash(ls*)",
-      "Bash(mkdir*)"
+      "Bash(mkdir*)",
+      "Bash(Get-ChildItem *)",
+      "Bash(Get-Content *)",
+      "Bash(Get-Item *)",
+      "Bash(Get-Location)",
+      "Bash(Get-Date)",
+      "Bash(Get-Date *)",
+      "Bash(Get-Process)",
+      "Bash(Get-Process *)",
+      "Bash(Select-String *)",
+      "Bash(Test-Path *)",
+      "Bash(Start-Sleep *)",
+      "Bash(Write-Output *)",
+      "Bash(Write-Host *)"
     ]
   },
   "hooks": {

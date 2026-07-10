@@ -2,6 +2,23 @@
 
 새 작업을 마칠 때마다 맨 위에 기록이 추가됩니다. (`/save-work` 실행 시 자동 기록)
 
+## 2026-07-10 (금) - 2차
+
+### 오늘 한 일
+- 터미널에서 "Do you want to proceed?" 허용 확인 창이 자주 뜨는 문제 해결
+  - Windows PowerShell의 읽기 전용 명령어들(Get-ChildItem, Get-Content, Select-String 등)을 프로젝트 허용 목록에 추가
+  - 이 설정은 GitHub에 함께 올라가므로 집/학교 어느 컴퓨터에서든 동일하게 적용됨
+- 주의: 이 설정은 class-picker 프로젝트 폴더 안에서만 적용됨. 다른 프로젝트(예: reading-challenge-webapp)에도 적용하려면 그 프로젝트의 `.claude/settings.json`이나 전역 설정(`~/.claude/settings.json`)에 같은 내용을 넣어야 함
+
+### 변경된 파일
+- `.claude/settings.json` (PowerShell 읽기 전용 명령 허용 목록 추가)
+- `PROGRESS.md`
+
+### 다음에 할 일
+- 학교 컴퓨터에서 이 브랜치를 받아서(`git pull`) 동일한 환경 만들기
+- 사라진 튜토리얼(`tutorial.md`)과 발표 자료(`slides.md`) 다시 작성하기
+- 다른 프로젝트에서도 허용 창이 많이 뜨면 그 프로젝트에 같은 설정 복사하기
+
 ## 2026-07-10 (금)
 
 ### 오늘 한 일
