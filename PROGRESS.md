@@ -2,6 +2,23 @@
 
 새 작업을 마칠 때마다 맨 위에 기록이 추가됩니다. (`/save-work` 실행 시 자동 기록)
 
+## 2026-07-10 (금) — 3차
+
+### 오늘 한 일
+- 코딩 도우미 에이전트 4종 추가
+  - `deploy-helper`: GitHub Pages로 배포해서 학생용 접속 주소 만들기
+  - `time-machine`: git 기록에서 예전 버전을 찾아 안전하게 복구
+  - `feature-planner`: 기능 아이디어를 PRD(요구사항 문서)로 정리 (docs/prd-*.md)
+  - `privacy-checker`: 학생 개인정보 노출 위험 점검 (읽기 전용)
+
+### 변경된 파일
+- `.claude/agents/deploy-helper.md`, `.claude/agents/time-machine.md`
+- `.claude/agents/feature-planner.md`, `.claude/agents/privacy-checker.md`
+
+### 다음에 할 일
+- (학교에서) 예전 대화에서 튜토리얼/PPT 작업물 복구 후 즉시 "저장해줘" 실행
+- 배포하고 싶어지면 "배포해줘" (deploy-helper)
+
 ## 2026-07-10 (금) — 2차
 
 ### 오늘 한 일
