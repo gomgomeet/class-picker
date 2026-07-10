@@ -2,6 +2,22 @@
 
 새 작업을 마칠 때마다 맨 위에 기록이 추가됩니다. (`/save-work` 실행 시 자동 기록)
 
+## 2026-07-10 (금) - 3차
+
+### 오늘 한 일
+- 권한 설정 도우미 에이전트(`permission-setup`) 추가
+  - 아무 프로젝트에서나 "허용 목록 설정해줘"라고 하면 그 프로젝트의 `.claude/settings.json`에 안전한 읽기 전용 명령 허용 목록을 자동으로 추가해줌
+  - 안전 목록(읽기 전용 명령)과 금지 목록(위험한 명령)이 내장되어 있어서 실수로 위험한 권한을 열지 않음
+- 모든 프로젝트에서 쓰려면: 로컬 컴퓨터에서 이 파일을 `~/.claude/agents/` 폴더로 복사해야 함 (PowerShell: `Copy-Item .claude\agents\permission-setup.md ~\.claude\agents\`)
+
+### 변경된 파일
+- `.claude/agents/permission-setup.md` (새 에이전트)
+- `PROGRESS.md`
+
+### 다음에 할 일
+- 집/학교 컴퓨터에서 `git pull` 후 `permission-setup.md`를 `~/.claude/agents/`로 복사하기
+- 사라진 튜토리얼(`tutorial.md`)과 발표 자료(`slides.md`) 다시 작성하기
+
 ## 2026-07-10 (금) - 2차
 
 ### 오늘 한 일
