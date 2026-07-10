@@ -2,6 +2,23 @@
 
 새 작업을 마칠 때마다 맨 위에 기록이 추가됩니다. (`/save-work` 실행 시 자동 기록)
 
+## 2026-07-10 (금) - 6차
+
+### 오늘 한 일
+- 에이전트 전용 저장소 `my-claude-agents` 개설 (비공개) 및 이사 완료
+  - 에이전트 5개(permission-setup, perf-doctor, bug-hunter, tutorial-writer, code-explainer) + 사용법 README를 새 저장소 main에 푸시
+  - 새 컴퓨터 설치법: `git clone https://github.com/gomgomeet/my-claude-agents $HOME\.claude\agents` 한 줄이면 끝 (전역 폴더 자체가 git 저장소가 됨)
+  - **앞으로 에이전트는 my-claude-agents 저장소에서 관리** (class-picker 안의 복사본은 이 프로젝트용으로 유지, setup-agents.ps1은 이제 안 써도 됨)
+
+### 변경된 파일
+- (새 저장소) my-claude-agents: 에이전트 5개 + README.md
+- (이 저장소) PROGRESS.md
+
+### 다음에 할 일
+- 집/학교 컴퓨터에서 `git clone https://github.com/gomgomeet/my-claude-agents $HOME\.claude\agents` 실행
+- PR #2 (터미널 허용 창 줄이기 + 에이전트) merge 하기
+- 사라진 튜토리얼(`tutorial.md`)과 발표 자료(`slides.md`) 다시 작성하기
+
 ## 2026-07-10 (금) - 5차
 
 ### 오늘 한 일
