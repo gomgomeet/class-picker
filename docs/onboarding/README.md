@@ -11,7 +11,9 @@
 | [`preview.html`](preview.html) | PPT 전체를 브라우저에서 넘겨보는 미리보기 (발표자 노트 표시, ← → 키 지원) |
 | [`tutorial-scripts.md`](tutorial-scripts.md) | 튜토리얼 영상 EP1~EP8 대본 (타임코드 · 촬영 지시 · 내레이션) |
 | [`image-assets.md`](image-assets.md) | 이미지 에셋 목록과 촬영·제작 가이드 |
-| [`assets/`](assets/) | 제작 완료 이미지 20종 (터미널 목업 6 · 다이어그램 6 · 썸네일 8) |
+| [`screenshots-map.md`](screenshots-map.md) | 실촬영 스크린샷 32장 ↔ 자료 매핑표 |
+| [`assets/`](assets/) | 제작 이미지 20종 (터미널 목업 6 · 다이어그램 6 · 썸네일 8) |
+| [`assets/screenshots/`](assets/screenshots/) | 실제 수업 스크린샷 32장 (Google Drive에서 수집) |
 
 ## 커리큘럼 요약
 
@@ -21,9 +23,11 @@
 
 영상은 EP1~EP5가 필수 코스, EP6~EP8이 선택 코스이며 PPT와 같은 커리큘럼·같은 예제(class-picker)를 사용합니다.
 
-## 남은 작업 (2차 PR 예정)
+## 남은 작업
 
-- [ ] 실촬영 자산 9종 확보 — 데모 GIF 2종, 실화면 스크린샷 등 (`image-assets.md` B 목록, 영상 녹화와 병행)
-- [ ] PPT 15·24번 슬라이드의 백업 GIF 자리 채우기
-- [ ] 영상 EP1~EP8 녹화·편집
+- [x] 실촬영 스크린샷 확보 — 수업 캡처 32장 수집 완료 (`screenshots-map.md`)
+- [x] PPT 데모 슬라이드에 실제 앱 화면 반영, 배포 슬라이드 신설 (총 38장)
+- [ ] 데모 GIF 2종 녹화 (`image-assets.md` B 목록 — 영상 녹화와 병행)
+- [ ] 영상 EP1~EP8 녹화·편집 (촬영 소스는 `screenshots-map.md` 참조)
 - [ ] 배포 채널 결정에 따른 표지·리소스 슬라이드 문구 조정 (사내용 vs 공개용)
+- [ ] 공개 배포 시 `shot-31/32`(Vercel 계정명) 블러 처리
