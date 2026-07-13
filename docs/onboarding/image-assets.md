@@ -1,7 +1,7 @@
 # 온보딩 자료 이미지 에셋 목록
 
 PPT와 튜토리얼 영상에 필요한 이미지를 정리한 문서입니다.
-**A. 제작 완료(12종)** 는 `docs/onboarding/assets/` 에 포함되어 있고, **B. 실촬영 필요(10종)** 는 촬영 가이드와 함께 아래에 정리했습니다.
+**A. 제작 완료(20종)** 는 `docs/onboarding/assets/` 에 포함되어 있고, **B. 실촬영 필요(9종)** 는 촬영 가이드와 함께 아래에 정리했습니다.
 
 ## A. 제작 완료 — 목업·다이어그램 (assets/ 폴더)
 
@@ -21,23 +21,25 @@ PPT와 튜토리얼 영상에 필요한 이미지를 정리한 문서입니다.
 | 10 | `diagram-git-workflow.png` | 다이어그램 | 한 문장 요청 → 브랜치→수정→검증→커밋→PR 흐름 | PPT 21 · EP4 |
 | 11 | `diagram-mcp.png` | 다이어그램 | Claude Code 허브 + Slack/Notion/GitHub/DB/Figma/API 연결 | PPT 29 · EP7 |
 | 12 | `diagram-ecosystem.png` | 다이어그램 | CLI · IDE · 웹/모바일 · GitHub Actions 4개 환경 | PPT 31 · EP8 |
+| 13~20 | `thumb-ep1.png` ~ `thumb-ep8.png` | 썸네일 | 에피소드별 유튜브 썸네일 (1280×720, 필수/선택 배지 + 핵심 명령어) | 영상 업로드용 |
 
-재생성 방법: 스크립트는 세션 스크래치패드의 `gen-images.js` (Playwright + Chromium). 내용 수정 후 다시 실행하면 됩니다.
+재생성 방법: 스크립트는 세션 스크래치패드의 `gen-images.js` / `gen-thumbs.js` (Playwright + Chromium). 내용 수정 후 다시 실행하면 됩니다.
 
 ## B. 실촬영 필요 — 실제 화면·녹화
 
+영상 녹화(EP1~EP8 제작)를 진행하면서 함께 확보하는 자산입니다. 머지 후 2차 PR로 추가 예정.
+
 | # | 파일(안) | 종류 | 내용 | 사용처 |
 |---|---|---|---|---|
-| 13 | `demo1-backup.gif` | 화면 녹화 | 라이브 데모 ① 전체 (구조 질문 → 결과 표시 기능 추가 → 브라우저 확인) | PPT 15 백업 · EP1/EP5 본편 |
-| 14 | `demo2-backup.gif` | 화면 녹화 | 라이브 데모 ② 전체 (Plan Mode → 중복 방지 구현 → PR 생성) | PPT 24 백업 · EP4 본편 |
-| 15 | `real-init-claude-md.png` | 스크린샷 | `/init` 실행 후 실제 생성된 CLAUDE.md 파일 | EP2 |
-| 16 | `real-rewind-menu.png` | 스크린샷 | Esc Esc 눌렀을 때 나오는 체크포인트 목록 실화면 | EP3 |
-| 17 | `real-pr-page.png` | 스크린샷 | Claude가 생성한 실제 GitHub PR (제목·설명 포함) | PPT 21 보강 · EP4 |
-| 18 | `real-ide-extension.png` | 스크린샷 | VS Code 확장에서 diff 나란히 보는 화면 | EP8 |
-| 19 | `real-web-session.png` | 스크린샷 | claude.ai/code 클라우드 세션 실행 화면 | EP8 |
-| 20 | `real-gh-mention.png` | 스크린샷 | PR 코멘트에서 @claude 멘션 → 자동 응답 커밋 | EP8 |
-| 21 | `real-mcp-add.gif` | 화면 녹화 | `claude mcp add`로 서버 등록 → 도구 사용되는 순간 | EP7 |
-| 22 | `thumb-ep1~ep8.png` | 썸네일 8종 | 각 에피소드 유튜브 썸네일 (터미널 목업 배경 + 큰 한글 타이틀) | 영상 업로드용 |
+| 21 | `demo1-backup.gif` | 화면 녹화 | 라이브 데모 ① 전체 (구조 질문 → 결과 표시 기능 추가 → 브라우저 확인) | PPT 15 백업 · EP1/EP5 본편 |
+| 22 | `demo2-backup.gif` | 화면 녹화 | 라이브 데모 ② 전체 (Plan Mode → 중복 방지 구현 → PR 생성) | PPT 24 백업 · EP4 본편 |
+| 23 | `real-init-claude-md.png` | 스크린샷 | `/init` 실행 후 실제 생성된 CLAUDE.md 파일 | EP2 |
+| 24 | `real-rewind-menu.png` | 스크린샷 | Esc Esc 눌렀을 때 나오는 체크포인트 목록 실화면 | EP3 |
+| 25 | `real-pr-page.png` | 스크린샷 | Claude가 생성한 실제 GitHub PR (제목·설명 포함) | PPT 21 보강 · EP4 |
+| 26 | `real-ide-extension.png` | 스크린샷 | VS Code 확장에서 diff 나란히 보는 화면 | EP8 |
+| 27 | `real-web-session.png` | 스크린샷 | claude.ai/code 클라우드 세션 실행 화면 | EP8 |
+| 28 | `real-gh-mention.png` | 스크린샷 | PR 코멘트에서 @claude 멘션 → 자동 응답 커밋 | EP8 |
+| 29 | `real-mcp-add.gif` | 화면 녹화 | `claude mcp add`로 서버 등록 → 도구 사용되는 순간 | EP7 |
 
 ## C. 촬영·녹화 가이드
 
