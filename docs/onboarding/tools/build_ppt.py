@@ -329,10 +329,16 @@ bullets(s, [
     ('sub', '2) “뽑기 결과가 화면에 크게 표시되게 해줘” — 수정 승인 흐름'),
     ('sub', '3) 브라우저 새로고침으로 결과 확인'),
     ['예상 소요: ', ('5분', CORAL, True)],
-], Inches(0.6), Inches(2.0), Inches(6.2), size=17, gap=12)
-pic(s, 'shot-19-170006-app-winner', x=Inches(7.1), y=Inches(1.85), h=Inches(4.7), base=SHOTS)
-tf = tb(s, Inches(7.1), Inches(6.6), Inches(5.7), Inches(0.4))
-add_run(tf.paragraphs[0], '실제 수업에서 만든 결과 화면 (백업 GIF: assets/demo1-backup.gif)', 11, DIM)
+], Inches(0.55), Inches(2.0), Inches(4.9), size=16, gap=10)
+# 데모 재현 애니메이션 GIF (발표 시 자동 재생 · 라이브 데모 백업)
+gif1 = s.shapes.add_picture(os.path.join(ASSETS, 'demo1-backup.gif'),
+                            Inches(5.55), Inches(1.9), width=Inches(7.3))
+tf = tb(s, Inches(5.55), Inches(6.6), Inches(7.3), Inches(0.4))
+add_run(tf.paragraphs[0], '▶ 데모 재현 애니메이션 (발표 화면에서 자동 재생) · assets/demo1-backup.gif', 11, CORAL)
+# 실제 결과 화면 인셋
+pic(s, 'shot-19-170006-app-winner', x=Inches(0.6), y=Inches(4.5), h=Inches(2.25), base=SHOTS)
+tf = tb(s, Inches(3.05), Inches(4.8), Inches(2.4), Inches(1.5), MSO_ANCHOR.MIDDLE)
+add_run(tf.paragraphs[0], '← 실제 수업에서\n   만든 결과 화면', 12, DIM)
 footer(s, num(), 'Level 1 · 시작하기')
 
 # ══════════════ 16. Level 1 정리 ══════════════
@@ -454,10 +460,16 @@ bullets(s, [
     ('sub', '3) 승인 → 구현 → “브랜치 만들어서 PR 올려줘”'),
     ('sub', '4) GitHub에서 PR 확인'),
     ['예상 소요: ', ('8분', CORAL, True)],
-], Inches(0.6), Inches(2.0), Inches(6.2), size=17, gap=12)
-pic(s, 'shot-14-165313-app-full-ui', x=Inches(7.4), y=Inches(1.85), h=Inches(4.7), base=SHOTS)
-tf = tb(s, Inches(7.4), Inches(6.6), Inches(5.7), Inches(0.4))
-add_run(tf.paragraphs[0], '실제 수업에서 만든 앱 화면 (백업 GIF: assets/demo2-backup.gif)', 11, DIM)
+], Inches(0.55), Inches(2.0), Inches(4.9), size=16, gap=9)
+# 데모 재현 애니메이션 GIF (발표 시 자동 재생 · 라이브 데모 백업)
+s.shapes.add_picture(os.path.join(ASSETS, 'demo2-backup.gif'),
+                     Inches(5.55), Inches(1.9), width=Inches(7.3))
+tf = tb(s, Inches(5.55), Inches(6.6), Inches(7.3), Inches(0.4))
+add_run(tf.paragraphs[0], '▶ 데모 재현 애니메이션 (발표 화면에서 자동 재생) · assets/demo2-backup.gif', 11, CORAL)
+# 실제 앱 화면 인셋
+pic(s, 'shot-14-165313-app-full-ui', x=Inches(0.6), y=Inches(4.55), h=Inches(2.2), base=SHOTS)
+tf = tb(s, Inches(2.9), Inches(4.85), Inches(2.5), Inches(1.5), MSO_ANCHOR.MIDDLE)
+add_run(tf.paragraphs[0], '← 실제 수업에서\n   만든 앱 화면', 12, DIM)
 footer(s, num(), 'Level 2 · 업무에 붙이기')
 
 # ══════════════ 25. Level 2 정리 ══════════════
