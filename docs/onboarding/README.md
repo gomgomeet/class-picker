@@ -23,11 +23,17 @@
 
 영상은 EP1~EP5가 필수 코스, EP6~EP8이 선택 코스이며 PPT와 같은 커리큘럼·같은 예제(class-picker)를 사용합니다.
 
+## 데모 영상·GIF
+
+- `assets/demo-video.mp4` — 데모 ①(기능 추가)·②(Plan Mode→PR)를 타이틀 카드와 함께 엮은 54초 영상
+- `assets/demo1-backup.gif` / `demo2-backup.gif` — PPT 라이브 데모 실패 대비 백업 GIF
+- 제작·수정 방법: `tools/record-demos.js` + `.claude/skills/class-deliverables` 스킬 참조
+
 ## 남은 작업
 
 - [x] 실촬영 스크린샷 확보 — 수업 캡처 32장 수집 완료 (`screenshots-map.md`)
 - [x] PPT 데모 슬라이드에 실제 앱 화면 반영, 배포 슬라이드 신설 (총 38장)
-- [ ] 데모 GIF 2종 녹화 (`image-assets.md` B 목록 — 영상 녹화와 병행)
-- [ ] 영상 EP1~EP8 녹화·편집 (촬영 소스는 `screenshots-map.md` 참조)
+- [x] 데모 GIF 2종 + 데모 영상 제작 (애니메이션 방식, `tools/record-demos.js`)
+- [ ] 영상 EP1~EP8 내레이션 녹음·편집 (촬영 소스는 `screenshots-map.md` 참조)
 - [ ] 배포 채널 결정에 따른 표지·리소스 슬라이드 문구 조정 (사내용 vs 공개용)
 - [ ] 공개 배포 시 `shot-31/32`(Vercel 계정명) 블러 처리
