@@ -7,13 +7,24 @@
 
 | 파일 | 설명 |
 |---|---|
-| [`claude-code-onboarding.pptx`](claude-code-onboarding.pptx) | 온보딩 PPT 37장 (발표자 노트 포함, 16:9 다크 테마) |
+| [`claude-code-onboarding.pptx`](claude-code-onboarding.pptx) | 온보딩 PPT 38장 (발표자 노트·캡처·데모 GIF 포함, 16:9 다크 테마) |
 | [`preview.html`](preview.html) | PPT 전체를 브라우저에서 넘겨보는 미리보기 (발표자 노트 표시, ← → 키 지원) |
 | [`tutorial-scripts.md`](tutorial-scripts.md) | 튜토리얼 영상 EP1~EP8 대본 (타임코드 · 촬영 지시 · 내레이션) |
 | [`image-assets.md`](image-assets.md) | 이미지 에셋 목록과 촬영·제작 가이드 |
 | [`screenshots-map.md`](screenshots-map.md) | 실촬영 스크린샷 32장 ↔ 자료 매핑표 |
-| [`assets/`](assets/) | 제작 이미지 20종 (터미널 목업 6 · 다이어그램 6 · 썸네일 8) |
+| [`assets/`](assets/) | 제작 이미지 20종 + 데모 GIF 2 + 데모 영상 (터미널 목업 6 · 다이어그램 6 · 썸네일 8) |
 | [`assets/screenshots/`](assets/screenshots/) | 실제 수업 스크린샷 32장 (Google Drive에서 수집) |
+| [`tools/`](tools/) | 모든 제작 스크립트 (이미지·썸네일·데모·PPT·노트·미리보기) — 수정 후 재실행하면 갱신 |
+
+## 제작 스킬
+
+이 자료를 만든 과정은 `.claude/skills/` 에 재사용 가능한 스킬 3계층으로 정리되어 있습니다.
+
+| 스킬 | 역할 |
+|---|---|
+| `onboarding-course-kit` | **총괄** — 요청부터 완성까지 전체 순서와 품질 게이트 |
+| `class-deliverables` | **제작** — PPT·GIF·영상·썸네일·미리보기 실제 빌드 방법 |
+| `drive-images` | **수집** — Google Drive에서 실촬영 스크린샷 검색·다운로드 |
 
 ## 커리큘럼 요약
 
