@@ -2,6 +2,23 @@
 
 새 작업을 마칠 때마다 맨 위에 기록이 추가됩니다. (`/save-work` 실행 시 자동 기록)
 
+## 2026-07-19 (일)
+
+### 오늘 한 일
+- 선생님들을 위한 클로드 코드 자동화 가이드 작성
+  - Notion "📘 클로드 작업 노트" 데이터베이스에 카드 4개 등록 (허용 창 줄이기 / 에이전트 만들기 / 에이전트 전역 배포 / save-work 자동 백업)
+  - 같은 내용을 `docs/teacher-guide.md` 파일로도 저장 (Notion 없이도 볼 수 있게)
+
+### 변경된 파일
+- `docs/teacher-guide.md` (새 파일)
+- `PROGRESS.md`
+- (Notion) 클로드 작업 노트에 페이지 4개 추가
+
+### 다음에 할 일
+- 집/학교 컴퓨터에서 `git clone https://github.com/gomgomeet/my-claude-agents $HOME\.claude\agents` 실행
+- PR #2 (터미널 허용 창 줄이기 + 에이전트) merge 하기
+- 사라진 튜토리얼(`tutorial.md`)과 발표 자료(`slides.md`) 다시 작성하기
+
 ## 2026-07-10 (금) - 6차
 
 ### 오늘 한 일
