@@ -1,35 +1,27 @@
-<title>곰곰 비서 · 담고 · 나누고 · 꺼내기</title>
+<title>인사이트 정리 · 담고 · 나누고 · 꺼내기</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <style>
   :root{
-    --bg:#FFF3F7; --surface:#FFFFFF; --sunk:#FFE9F0; --ink:#5A4652; --dim:#B08FA0;
-    --line:#F7D7E4; --accent:#FF7BAC; --accent-soft:#FFE3EE;
-    --inbox:#C9A9B8; --insight:#FFB338; --diary:#5BC4D4; --archive:#8FD694;
-    --danger:#F1737F;
-    --r:22px; --pad:16px;
+    --bg:#F4F2EC; --surface:#FFFFFF; --sunk:#EEEBE2; --ink:#23211C; --dim:#7C776C;
+    --line:#E2DED3; --accent:#4B49C4; --accent-soft:#E9E8FA;
+    --inbox:#8A8578; --insight:#C8892A; --diary:#3E7BB6; --archive:#4E9A6B;
+    --danger:#C4553D;
+    --r:16px; --pad:16px;
     --safe-b:env(safe-area-inset-bottom,0px);
   }
   @media (prefers-color-scheme:dark){
-    :root{ --bg:#241B26; --surface:#332638; --sunk:#2B2030; --ink:#F5E5EE; --dim:#B598A8;
-      --line:#4A3850; --accent:#FF9CC0; --accent-soft:#4A3040;
-      --insight:#FFC15E; --diary:#7DD6E4; --archive:#A3E4A8; --inbox:#B598A8; --danger:#FF8E98; }
+    :root{ --bg:#17161A; --surface:#211F26; --sunk:#1A191E; --ink:#ECEAE3; --dim:#9A9589;
+      --line:#332F39; --accent:#9B99F2; --accent-soft:#2A2740;
+      --insight:#E0A54A; --diary:#6BA6DC; --archive:#7BC495; --inbox:#9A9589; --danger:#E0785F; }
   }
-  :root[data-theme="light"]{ --bg:#FFF3F7; --surface:#FFFFFF; --sunk:#FFE9F0; --ink:#5A4652; --dim:#B08FA0; --line:#F7D7E4; --accent:#FF7BAC; --accent-soft:#FFE3EE; --insight:#FFB338; --diary:#5BC4D4; --archive:#8FD694; --inbox:#C9A9B8; --danger:#F1737F; }
-  :root[data-theme="dark"]{ --bg:#241B26; --surface:#332638; --sunk:#2B2030; --ink:#F5E5EE; --dim:#B598A8; --line:#4A3850; --accent:#FF9CC0; --accent-soft:#4A3040; --insight:#FFC15E; --diary:#7DD6E4; --archive:#A3E4A8; --inbox:#B598A8; --danger:#FF8E98; }
+  :root[data-theme="light"]{ --bg:#F4F2EC; --surface:#FFFFFF; --sunk:#EEEBE2; --ink:#23211C; --dim:#7C776C; --line:#E2DED3; --accent:#4B49C4; --accent-soft:#E9E8FA; --insight:#C8892A; --diary:#3E7BB6; --archive:#4E9A6B; --inbox:#8A8578; --danger:#C4553D; }
+  :root[data-theme="dark"]{ --bg:#17161A; --surface:#211F26; --sunk:#1A191E; --ink:#ECEAE3; --dim:#9A9589; --line:#332F39; --accent:#9B99F2; --accent-soft:#2A2740; --insight:#E0A54A; --diary:#6BA6DC; --archive:#7BC495; --inbox:#9A9589; --danger:#E0785F; }
 
   *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   html,body{height:100%}
-  body{color:var(--ink);
-    background:linear-gradient(160deg,var(--bg) 0%,#FFF9E8 55%,#EAFBF2 100%);
-    background-attachment:fixed;
+  body{background:var(--bg);color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-    line-height:1.55;overflow-x:hidden}
-  @media (prefers-color-scheme:dark){ body{background:linear-gradient(160deg,var(--bg) 0%,#2A2130 60%,#1E2430 100%)} }
-  :root[data-theme="dark"] body{background:linear-gradient(160deg,var(--bg) 0%,#2A2130 60%,#1E2430 100%)}
-  :root[data-theme="light"] body{background:linear-gradient(160deg,var(--bg) 0%,#FFF9E8 55%,#EAFBF2 100%)}
-  .card,.capture,.health{box-shadow:0 4px 14px rgba(255,123,172,.08)}
-  .add{border-radius:999px !important}
-  .brand h1 .heart{color:var(--accent)}
+    line-height:1.5;overflow-x:hidden}
   .wrap{max-width:560px;margin:0 auto;min-height:100%;display:flex;flex-direction:column}
 
   header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
@@ -117,14 +109,14 @@
 <div class="wrap">
   <header>
     <button class="theme-btn" id="theme" aria-label="테마 전환">◐</button>
-    <div class="brand"><h1>🐻 곰곰 비서 <span class="heart">♥</span></h1></div>
-    <div class="brand"><span class="sub">오늘도 차곡차곡 — 담고 · 나누고 · 꺼내기</span></div>
+    <div class="brand"><h1>💡 인사이트 정리</h1></div>
+    <div class="brand"><span class="sub">담고 · 나누고 · 꺼내기 — 흩어진 것을 한 곳에</span></div>
     <div class="tabs" id="tabs"></div>
   </header>
 
   <main>
     <div class="capture">
-      <textarea id="ta" placeholder="🌸 오늘 무엇을 담아볼까요?" rows="1"></textarea>
+      <textarea id="ta" placeholder="무엇을 담을까요? (메모·링크 붙여넣기·떠오른 생각)" rows="1"></textarea>
       <div class="cap-row">
         <div class="src-chips" id="capSrc"></div>
         <button class="mic" id="mic" aria-label="음성으로 담기">🎤</button>
@@ -152,12 +144,13 @@ const VIEWS=[
   {k:"all",label:"전체",icon:"▦"},
   {k:"inbox",label:"Inbox",icon:"📥"},
   {k:"인사이트",label:"인사이트",icon:"💡"},
+  {k:"건강기록",label:"건강기록",icon:"💪"},
   {k:"다이어리",label:"다이어리",icon:"📔"},
-  {k:"보관",label:"보관",icon:"🗄"},
 ];
-const STRIPE={inbox:"var(--inbox)","인사이트":"var(--insight)","다이어리":"var(--diary)","보관":"var(--archive)"};
+const STRIPE={inbox:"var(--inbox)","인사이트":"var(--insight)","다이어리":"var(--diary)","건강기록":"var(--archive)"};
 const KEY="insight-app-v1";
 let items=load(), view="inbox", capSources=[];
+items.forEach(i=>{if(i.status==="보관")i.status="인사이트";});
 
 function load(){try{return JSON.parse(localStorage.getItem(KEY))||[]}catch(e){return[]}}
 function save(){localStorage.setItem(KEY,JSON.stringify(items))}
@@ -217,20 +210,30 @@ function healthHtml(){
     <button class="hbtn ${h.water>=6?"done":""}" data-h="water">💧 물 ${h.water}잔</button>
     <button class="hbtn ${h.meal>=3?"done":""}" data-h="meal">🍚 식사 ${h.meal}회</button>
     <button class="hbtn ${h.move?"done":""}" data-h="move">🏃 운동 ${h.move?"완료":"아직"}</button>
+    <button class="hbtn" data-hsave>📥 기록으로 저장</button>
   </div></div>`;
 }
 function bindHealth(){
-  document.querySelectorAll(".hbtn").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".hbtn[data-h]").forEach(b=>b.onclick=()=>{
     const h=healthLoad(),k=b.dataset.h;
     if(k==="move")h.move=!h.move;
     else{h[k]=(h[k]+1)%((k==="water"?8:4)+1);}
     healthSave(h);render();
   });
+  const sv=document.querySelector("[data-hsave]");
+  if(sv)sv.onclick=()=>{
+    const h=healthLoad(),day=new Date().toISOString().slice(0,10);
+    const text=`오늘의 건강 (${day})\n💧 물 ${h.water}잔 · 🍚 식사 ${h.meal}회 · 🏃 운동 ${h.move?"완료":"안 함"}`;
+    const dup=items.find(i=>i.status==="건강기록"&&i.text.startsWith(`오늘의 건강 (${day})`));
+    if(dup){dup.text=text;dup.ts=Date.now();}
+    else items.unshift({id:uid(),text,status:"건강기록",sources:[],topics:["개인"],outputs:[],link:"",ts:Date.now()});
+    save();render();
+  };
 }
 
 // ---- tabs ----
 function renderTabs(){
-  const counts={all:items.length,inbox:0,"인사이트":0,"다이어리":0,"보관":0};
+  const counts={all:items.length,inbox:0,"인사이트":0,"다이어리":0,"건강기록":0};
   items.forEach(i=>counts[i.status]!==undefined&&counts[i.status]++);
   document.getElementById("tabs").innerHTML=VIEWS.map(v=>`<button class="tab ${view===v.k?"on":""}" data-v="${v.k}">
     <span>${v.icon}</span>${v.label}<span class="c">${counts[v.k]}</span></button>`).join("");
@@ -242,11 +245,12 @@ function render(){
   renderTabs();
   const list=document.getElementById("list"), hint=document.getElementById("hint");
   const rows=items.filter(i=>view==="all"||i.status===view);
-  list.innerHTML=(view==="다이어리"?healthHtml():"")+rows.map(cardHtml).join("");
+  list.innerHTML=(view==="건강기록"?healthHtml():"")+rows.map(cardHtml).join("");
   hint.textContent = rows.length? "" :
     (view==="inbox"?"담긴 것이 없어요. 위에서 무엇이든 담아 보세요.":
      view==="인사이트"?"아직 인사이트가 없어요. Inbox에서 💡로 옮겨 보세요.":
-     view==="다이어리"?"할 일이 없어요. Inbox에서 📔로 옮기면 체크리스트가 됩니다.":"비어 있어요.");
+     view==="다이어리"?"할 일이 없어요. Inbox에서 📔로 옮기면 체크리스트가 됩니다.":
+     view==="건강기록"?"오늘의 체크를 누르고 '기록으로 저장'하면 여기에 쌓입니다.":"비어 있어요.");
   bindCards();bindHealth();
 }
 function tagHtml(i){
@@ -263,8 +267,8 @@ function cardHtml(i){
     <div class="meta">${tagHtml(i)}<span class="when">${when(i.ts)}</span></div>
     <div class="actions">
       ${i.status!=="인사이트"?`<button class="act ins" data-mv="인사이트">💡 인사이트</button>`:""}
+      ${i.status!=="건강기록"?`<button class="act arc" data-mv="건강기록">💪 건강기록</button>`:""}
       ${i.status!=="다이어리"?`<button class="act dia" data-mv="다이어리">📔 다이어리</button>`:""}
-      ${i.status!=="보관"?`<button class="act arc" data-mv="보관">🗄 보관</button>`:""}
       ${i.status!=="inbox"?`<button class="act" data-mv="inbox">↩ Inbox</button>`:""}
       <button class="act del" data-del>삭제</button>
       <div class="editor">
@@ -304,7 +308,7 @@ document.getElementById("expCsv").onclick=()=>{
   // ✅ Inbox DB(2026 Dashboard) 스키마에 맞춘 내보내기
   const esc=s=>`"${(s||"").replace(/"/g,'""')}"`;
   const SRC_MAP={"메시지·톡":"메신저","스크린샷":"스크린샷","음성":"voice"};
-  const CLS_MAP={"인사이트":"인사이트","다이어리":"오늘시작","보관":"기타",inbox:"기타"};
+  const CLS_MAP={"인사이트":"인사이트","다이어리":"오늘시작","건강기록":"기타",inbox:"기타"};
   const head=["제목","분류","출처","요약","수신일","공유됨"];
   const rows=items.map(i=>[title(i.text),CLS_MAP[i.status]||"기타",
     SRC_MAP[i.sources[0]]||"직접입력",i.text,
