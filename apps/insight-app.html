@@ -232,11 +232,15 @@ function download(name,text,type){const b=new Blob([text],{type});const u=URL.cr
   const a=document.createElement("a");a.href=u;a.download=name;a.click();URL.revokeObjectURL(u);}
 document.getElementById("expJson").onclick=()=>download("insight-export.json",JSON.stringify(items,null,2),"application/json");
 document.getElementById("expCsv").onclick=()=>{
+  // ✅ Inbox DB(2026 Dashboard) 스키마에 맞춘 내보내기
   const esc=s=>`"${(s||"").replace(/"/g,'""')}"`;
-  const head=["제목","상태","출처","주제","원본링크","메모","날짜","산출물"];
-  const rows=items.map(i=>[title(i.text),i.status,i.sources.join(", "),i.topics.join(", "),
-    i.link,i.text,new Date(i.ts).toISOString().slice(0,10),i.outputs.join(", ")].map(esc).join(","));
-  download("insight-notion.csv","﻿"+[head.join(","),...rows].join("\n"),"text/csv");
+  const SRC_MAP={"메시지·톡":"메신저","스크린샷":"스크린샷","음성":"voice"};
+  const CLS_MAP={"인사이트":"인사이트","다이어리":"오늘시작","보관":"기타",inbox:"기타"};
+  const head=["제목","분류","출처","요약","수신일","공유됨"];
+  const rows=items.map(i=>[title(i.text),CLS_MAP[i.status]||"기타",
+    SRC_MAP[i.sources[0]]||"직접입력",i.text,
+    new Date(i.ts).toISOString().slice(0,10),i.link].map(esc).join(","));
+  download("insight-inbox.csv","﻿"+[head.join(","),...rows].join("\n"),"text/csv");
 };
 document.getElementById("imp").onclick=()=>document.getElementById("impFile").click();
 document.getElementById("impFile").onchange=e=>{
