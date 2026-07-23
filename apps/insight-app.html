@@ -198,9 +198,12 @@ micBtn.onclick=()=>{
   rec=new SR();rec.lang="ko-KR";rec.interimResults=true;rec.continuous=false;
   micBtn.classList.add("rec");micBtn.textContent="⏹";
   let finalText="";
+  const base=ta.value.trim();  // 녹음 전에 적어둔 내용 보존
   rec.onresult=e=>{let interim="";
     for(const r of e.results){r.isFinal?finalText+=r[0].transcript:interim+=r[0].transcript;}
-    ta.value=(finalText+interim).trim();ta.dispatchEvent(new Event("input"));};
+    const spoken=(finalText+interim).trim();
+    ta.value=base?(base+"\n"+spoken):spoken;
+    ta.dispatchEvent(new Event("input"));};
   rec.onend=()=>{micBtn.classList.remove("rec");micBtn.textContent="🎤";rec=null;
     if(ta.value.trim()&&!capSources.includes("음성")){capSources.push("음성");renderCapSrc();}};
   rec.onerror=()=>{micBtn.classList.remove("rec");micBtn.textContent="🎤";rec=null;};
